@@ -53,13 +53,16 @@ Este documento describe **lo que implementé** para contenedorización y CI/CD d
 
 ## Configuración de credenciales (secrets)
 
+Este es mi Fork:
+![Pipeline](img/Fork.png)
+
 Creé dos **Repository secrets** en GitHub (Settings → Secrets and variables → Actions):
 
 - `DOCKERHUB_USERNAME` = `santi1761`
 - `DOCKERHUB_TOKEN` = `<access token generado en Docker Hub>`
 
 > El token se generó en Docker Hub (Account Settings → Security → New Access Token).
-![04 - GitHub - Repository Secrets](img/Secrets.png)
+![Repository Secrets](img/Secrets.png)
 
 
 ---
@@ -87,9 +90,9 @@ Creé dos **Repository secrets** en GitHub (Settings → Secrets and variables �
 ## Resultado y evidencias
 
 - **Ejecución del workflow en Actions:** `https://github.com/Santi1761/docker-test/actions/runs/17899449689/job/50890478593`  
-  _Captura:_ `img/Pipeline.png`
+  ![Pipeline](img/Pipeline.png)
 - **Repositorio en Docker Hub:** `https://hub.docker.com/r/santi1761/docker-test`  
-  _Captura:_ `img/DockerHub.png`
+  ![DockerHub](img/DockerHub.png)
 - **Imagen ejecutando localmente:**
 
   ```bash
@@ -97,11 +100,10 @@ Creé dos **Repository secrets** en GitHub (Settings → Secrets and variables �
   docker run -p 8080:80 --name docker-test santi1761/docker-test:latest
   # Abrir http://localhost:8080
   ```
-
-  _Capturas:_  
-  - `img/Ejecucion1.png` (terminal)
-  - `img/Ejecucion2.png` (terminal)  
-  - `img/Ejecucion3.png` (navegador)  
+ 
+  - ![Terminal](img/Ejecucion1.png)
+  - ![Terminal](img/Ejecucion2.png)  
+  - ![Navegador](img/Ejecucion3.png)  
 
 ---
 
