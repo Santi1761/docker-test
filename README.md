@@ -212,8 +212,8 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            santiagoarboledavelasco/docker-test:latest
-            santiagoarboledavelasco/docker-test:${{ github.sha }}
+            santi1761/docker-test:latest
+            santi1761/docker-test:${{ github.sha }}
 ```
 
 
